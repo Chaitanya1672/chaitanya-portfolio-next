@@ -21,15 +21,28 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse btnColor" id="navbarNavAltMarkup">
+        <div
+          className="navbar-collapse btnColor collapse"
+          id="navbarNavAltMarkup"
+        >
           <div className="navbar-nav ms-auto">
-            <Link className="nav-link" href="/">Home</Link>
-            <Link className="nav-link" href="/open-source">Open Source</Link>
+            <Link className="nav-link" href="/">
+              Home
+            </Link>
+            <Link className="nav-link" href="/open-source">
+              Open Source
+            </Link>
             {/* <Link className="nav-link" href="#skills">Skills</Link>
             <Link className="nav-link" href="#experience">Experience</Link>
             <Link className="nav-link" href="#projects">Projects</Link>
             <Link className="nav-link" href="#contact">Contact</Link> */}
-            <Link className="nav-link" href="https://flowcv.com/resume/dknft98k3a" target="_blank">Resume</Link>
+            <Link
+              className="nav-link"
+              href="https://flowcv.com/resume/dknft98k3a"
+              target="_blank"
+            >
+              Resume
+            </Link>
           </div>
         </div>
       </div>

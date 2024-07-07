@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities; */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 body {
   padding: 0;
   margin: 0;
   height: 100vh;
   color: #fff;
   background-color: rgb(23, 28, 40) !important;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -62,7 +62,7 @@ body {
 }
 
 .nav-link::before {
-  content: " ";
+  content: ' ';
   position: absolute;
   width: 0;
   height: 2px;
@@ -145,8 +145,7 @@ section {
 }
 
 #dynamic-text,
-.intro-skills
-{
+.intro-skills {
   color: #4caf50;
 }
 
@@ -266,7 +265,7 @@ section {
   height: 40px;
 }
 
-hr{
+hr {
   width: 20%;
   margin: 0.5rem 0;
   opacity: 1;
@@ -498,7 +497,7 @@ button:hover {
 .rights-name {
   color: #4caf50;
   display: inline-block;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .mainDetails {
@@ -546,7 +545,6 @@ button:hover {
 /* Up Arrow Icon */
 .up-arrow-btn {
   position: relative;
-  
 }
 
 .up-arrow {
@@ -567,10 +565,10 @@ button:hover {
 }
 
 /* Style to remove default hover effect */
-.up-arrow-btn:hover, .up-arrow path {
+.up-arrow-btn:hover,
+.up-arrow path {
   filter: none; /* Remove default hover effect */
   stroke: #4caf50; /* Change to your desired color */
-  
 }
 @media screen and (min-width: 401px) and (max-width: 709px) {
   .mainDetails {

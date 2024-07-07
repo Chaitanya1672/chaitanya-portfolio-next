@@ -1,13 +1,17 @@
-import GitHubRepoCards from '@/components/Github/GitHubRepoCards'
-import React from 'react'
+'use client';
+import GitHubRepoCards from '@/components/Github/GitHubRepoCards';
+import { useGithubStats } from '@/components/hooks/githubApis/useGithubStats';
+import React from 'react';
 
-const page = () => {
+const OpenSourcePage = () => {
+  const { pullRequests } = useGithubStats();
+  console.log(pullRequests);
   return (
     <>
       <div>Open-source</div>
-      <GitHubRepoCards/>
+      <GitHubRepoCards />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default OpenSourcePage;
