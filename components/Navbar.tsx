@@ -29,7 +29,10 @@ const Navbar = () => {
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav ms-auto">
-            <Link className="nav-link" href="/">
+            <Link
+              className="nav-link"
+              href="https://chaitanya-potfolio.vercel.app/"
+            >
               Home
             </Link>
             <Link className="nav-link" href="/open-source">
