@@ -7,7 +7,10 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <Link className="navbar-brand" href="/">
+        <Link
+          className="navbar-brand"
+          href="https://chaitanya-potfolio.vercel.app/"
+        >
           <Image src="/navbarImg.svg" alt="Brand Logo" width={50} height={50} />
         </Link>
         <button

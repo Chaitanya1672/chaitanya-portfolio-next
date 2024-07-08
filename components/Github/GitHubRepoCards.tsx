@@ -1,15 +1,16 @@
 import React from 'react';
 import RepoCard from './RepoCard';
 import { contributedRepo } from '@/constants/github';
-import { RepoCardProps } from '@/utils/lib/types/repoCard';
 
 const GitHubRepoCards = () => {
   return (
     <>
-      <div>GitHubRepoCards</div>
-      {contributedRepo.map((value: RepoCardProps) => (
-        <RepoCard repo={value} key={value.repo_name} />
-      ))}
+      <h1 className="project-heading text-center">Open Source Contributions</h1>
+      <div className="parent-repo-card d-flex m-auto flex-wrap">
+        {contributedRepo.map((repo) => (
+          <RepoCard key={repo.repo_name} repo={repo} />
+        ))}
+      </div>
     </>
   );
 };

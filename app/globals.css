@@ -570,6 +570,40 @@ button:hover {
   filter: none; /* Remove default hover effect */
   stroke: #4caf50; /* Change to your desired color */
 }
+
+/* Repo card styles */
+.parent-repo-card {
+  width: 80%;
+}
+.card {
+  width: 22%;
+  /* flex: 1 1 22%; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+.contri-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pr-button,
+.issue-button {
+  transition:
+    background-color 0.3s ease-in,
+    transform 0.3s ease-in;
+}
+
+.pr-button:hover,
+.issue-button:hover {
+  background-color: #4caf50 !important; /* Change to your desired hover background color */
+  transform: translateY(-3px);
+}
+
 @media screen and (min-width: 401px) and (max-width: 709px) {
   .mainDetails {
     order: 2;
@@ -612,4 +646,40 @@ button:hover {
   .nav-link:hover::before {
     width: 80%;
   }
+}
+
+@media (max-width: 910px) {
+  .repo-profile {
+    display: flex;
+    flex-direction: column !important;
+    font-size: small;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: medium !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .card {
+    width: 45%;
+    flex: 1 1 45%;
+  }
+}
+@media (max-width: 450px) {
+  .card {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }

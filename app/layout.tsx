@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
+import React from 'react';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -28,11 +29,15 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
-        <a target="_blank" href="https://icons8.com/icon/33294/code-fork">
+        <a
+          target="_blank"
+          href="https://icons8.com/icon/33294/code-fork"
+          rel="noreferrer"
+        >
           Code Fork
         </a>{' '}
         icon by{' '}
-        <a target="_blank" href="https://icons8.com">
+        <a target="_blank" href="https://icons8.com" rel="noreferrer">
           Icons8
         </a>
         {/* Bootstrap JavaScript */}

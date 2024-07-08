@@ -1,16 +1,12 @@
 'use client';
 import GitHubRepoCards from '@/components/Github/GitHubRepoCards';
-import { useGithubStats } from '@/components/hooks/githubApis/useGithubStats';
 import React from 'react';
 
 const OpenSourcePage = () => {
-  const { pullRequests } = useGithubStats();
-  console.log(pullRequests);
   return (
-    <>
-      <div>Open-source</div>
+    <div className="mt-5">
       <GitHubRepoCards />
-    </>
+    </div>
   );
 };
 
