@@ -1,9 +1,11 @@
+'use client';
 // components/Navbar.js
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Navbar = () => {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -21,11 +23,12 @@ const Navbar = () => {
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="navbar-collapse btnColor collapse"
+          className={`navbar-collapse btnColor collapse ${isMobileNavOpen ? 'show' : ''}`}
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav ms-auto">
