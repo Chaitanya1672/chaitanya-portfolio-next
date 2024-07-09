@@ -74,12 +74,13 @@ const RepoCard = ({ repo }: { repo: RepoCardProps }) => {
             </div>
           </Link>
           <Link
-            href={repo?.issues_link || ''}
-            target="_blank"
+            href={(repo.issues_count && repo?.issues_link) || ''}
+            target={repo.issues_count ? `_blank` : undefined}
             className="col-5"
           >
+            {/* eslint-disable max-len */}
             <div
-              className="bg-secondary issue-button rounded border p-2 text-center"
+              className={`bg-secondary issue-button rounded border p-2 text-center ${repo.issues_count === 0 ? 'disabled' : ''}`}
               title="Issues"
             >
               <span className="text-light mx-2 my-auto">
