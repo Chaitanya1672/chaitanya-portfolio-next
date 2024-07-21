@@ -9,12 +9,12 @@
     }
   },
   "extends": [
+    "eslint:recommended",
     "prettier",
     "plugin:@typescript-eslint/recommended",
     "next",
     "next/core-web-vitals",
     "plugin:prettier/recommended",
-    "eslint:recommended",
     "plugin:react/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -31,10 +31,14 @@
     "max-len": [
       "error",
       {
+        "max": 380,
+        "skipBlankLines": true,
+        "skipComments": true,
         "code": 100
       }
     ],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "semi": ["error", "never"]
   },
   "plugins": ["@typescript-eslint", "prettier"]
 }

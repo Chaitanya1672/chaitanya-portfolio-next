@@ -1,11 +1,11 @@
-'use client';
+'use client'
 // components/Navbar.js
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React, { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Navbar = () => {
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

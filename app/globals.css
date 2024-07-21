@@ -594,13 +594,14 @@ button:hover {
 .pr-button,
 .issue-button {
   transition:
-    background-color 0.3s ease-in,
-    transform 0.3s ease-in;
+    background-color 0.1s ease-in,
+    transform 0.1s ease-in;
+  background-color: #4dc050 !important;
 }
 
 .pr-button:hover,
 .issue-button:hover {
-  background-color: #4caf50 !important; /* Change to your desired hover background color */
+  background-color: #3bb03f !important; /* Change to your desired hover background color */
   transform: translateY(-3px);
 }
 
@@ -688,4 +689,41 @@ button:hover {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.6);
+  border-radius: 4px;
+  border: 3px solid rgba(128, 128, 128, 0.2);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+/* Horizontal Scroll Bar */
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: rgba(128, 128, 128, 0.6);
+  border-radius: 4px;
+  border: 3px solid rgba(128, 128, 128, 0.2);
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+/* Optional: Add hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(128, 128, 128, 0.8);
+  /* Optionally add box-shadow based on your design */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }

@@ -1,9 +1,9 @@
 // components/GitHubCard.js
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import { RepoCardProps } from '@/utils/lib/types/repoCard';
-import Link from 'next/link';
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import { RepoCardProps } from '@/utils/lib/types/repoCard'
+import Link from 'next/link'
 
 const RepoCard = ({ repo }: { repo: RepoCardProps }) => {
   return (
@@ -34,12 +34,12 @@ const RepoCard = ({ repo }: { repo: RepoCardProps }) => {
             <span className="text-light mx-2 my-auto">
               <Image
                 src="/open-source/common/star-white.svg"
-                width={15}
-                height={15}
+                width={18}
+                height={18}
                 alt="stars"
               />
             </span>
-            <span className="h6 font-weight-bold my-auto">{repo.stars}</span>
+            <span className="h5 font-weight-bold my-auto">{repo.stars}</span>
           </div>
           <div
             className="col-6 bg-secondary rounded border p-2 text-center"
@@ -48,18 +48,18 @@ const RepoCard = ({ repo }: { repo: RepoCardProps }) => {
             <span className="text-light mx-2 my-auto">
               <Image
                 src="/open-source/common/fork-white.svg"
-                width={15}
-                height={15}
+                width={18}
+                height={18}
                 alt="forks"
               />
             </span>
-            <span className="h6 font-weight-bold my-auto">{repo.forks}</span>
+            <span className="h5 font-weight-bold my-auto">{repo.forks}</span>
           </div>
         </div>
         <div className="contri-row row">
           <Link href={repo?.pr_link || ''} target="_blank" className="col-5">
             <div
-              className="bg-secondary pr-button rounded border p-2 text-center"
+              className="pr-button rounded border p-2 text-center"
               title="Pull Requests"
             >
               <span className="text-light mx-2 my-auto">
@@ -97,7 +97,7 @@ const RepoCard = ({ repo }: { repo: RepoCardProps }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RepoCard;
+export default RepoCard

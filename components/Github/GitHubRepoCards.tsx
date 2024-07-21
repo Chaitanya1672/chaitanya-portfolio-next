@@ -1,6 +1,6 @@
-import React from 'react';
-import RepoCard from './RepoCard';
-import { contributedRepo } from '@/constants/github';
+import React from 'react'
+import RepoCard from './RepoCard'
+import { contributedRepo } from '@/constants/github'
 
 const GitHubRepoCards = () => {
   return (
@@ -12,7 +12,7 @@ const GitHubRepoCards = () => {
         ))}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default GitHubRepoCards;
+export default GitHubRepoCards

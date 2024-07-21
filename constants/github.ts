@@ -37,9 +37,9 @@ export const repos = [
     avatar_url: 'https://avatars.githubusercontent.com/u/158404377?v=4',
     link: 'https://github.com/code100x/daily-code',
   },
-];
+]
 
-export const githubAccessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
+export const githubAccessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN
 
 export const contributedRepo = [
   {
@@ -126,4 +126,4 @@ export const contributedRepo = [
     issues_count: 0,
     pr_count: 2,
   },
-];
+]
