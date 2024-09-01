@@ -31,10 +31,10 @@
     "max-len": [
       "error",
       {
-        "max": 380,
+        "code": 380,
+        "ignoreComments": true,
         "skipBlankLines": true,
-        "skipComments": true,
-        "code": 100
+        "skipComments": true
       }
     ],
     "react/react-in-jsx-scope": "off",

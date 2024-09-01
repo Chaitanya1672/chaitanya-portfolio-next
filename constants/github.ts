@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 export const repos = [
   {
     owner: 'processing',
@@ -51,8 +49,8 @@ export const contributedRepo = [
       'https://github.com/processing/p5.js-web-editor/pulls?q=author%3AChaitanya1672+',
     issues_link:
       'https://github.com/processing/p5.js-web-editor/issues?q=is%3Aissue+author%3AChaitanya1672+',
-    stars: '1.3k',
-    forks: '1.3k',
+    stars: '1.3 k',
+    forks: '1.3 k',
     issues_count: 0,
     pr_count: 6,
   },
@@ -93,8 +91,8 @@ export const contributedRepo = [
       'https://github.com/processing/p5.js/pulls?q=author%3AChaitanya1672+',
     issues_link:
       'https://github.com/processing/p5.js/issues?q=is%3Aissue+author%3AChaitanya1672+',
-    stars: '21.2k',
-    forks: '3.2k',
+    stars: '21.2 k',
+    forks: '3.2 k',
     issues_count: 0,
     pr_count: 1,
   },
