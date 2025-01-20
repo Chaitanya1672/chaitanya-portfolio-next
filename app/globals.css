@@ -10,6 +10,7 @@ body {
   color: #fff;
   background-color: rgb(23, 28, 40) !important;
   font-family: 'Poppins', sans-serif;
+  line-height: normal;
 }
 
 body::-webkit-scrollbar {
@@ -352,6 +353,7 @@ a {
 }
 
 .project-heading {
+  text-align: center;
   font-size: 38px;
   margin-bottom: 30px;
 }
@@ -573,7 +575,12 @@ button:hover {
 
 /* Repo card styles */
 .parent-repo-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
   width: 80%;
+  gap: 0.85rem;
 }
 .card {
   width: 22%;

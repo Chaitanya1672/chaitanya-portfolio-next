@@ -1,0 +1,102 @@
+.card {
+  max-width: 28rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color: rgb(236, 253, 243);
+  background: linear-gradient(to bottom right, rgb(20, 83, 45), rgb(0, 0, 0));
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+}
+
+.repoLink {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(134, 239, 172);
+  text-decoration: none;
+}
+
+.repoLink:hover {
+  color: rgb(187, 247, 208);
+}
+
+.externalIcon {
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.repoLink:hover .externalIcon {
+  opacity: 1;
+}
+
+.owner {
+  color: rgb(134, 239, 172);
+  margin-top: 0.25rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.statBox {
+  display: block;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.statBox:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.statHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: rgb(134, 239, 172);
+}
+
+.statIcon {
+  width: 1rem;
+  height: 1rem;
+  color: rgb(134, 239, 172);
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(236, 253, 243);
+  margin-top: 0.25rem;
+}

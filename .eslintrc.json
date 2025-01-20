@@ -33,12 +33,12 @@
       {
         "code": 380,
         "ignoreComments": true,
-        "skipBlankLines": true,
-        "skipComments": true
+        "ignoreTrailingComments": true
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "plugins": ["@typescript-eslint", "prettier"]
 }
