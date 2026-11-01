@@ -1,44 +1,3 @@
-export const repos = [
-  {
-    owner: 'processing',
-    repo_name: 'p5.js-web-editor',
-    avatar_url: 'https://avatars.githubusercontent.com/u/1617169?v=4',
-    link: 'https://github.com/processing/p5.js-web-editor',
-  },
-  {
-    owner: 'processing',
-    repo_name: 'p5.js',
-    avatar_url: 'https://avatars.githubusercontent.com/u/1617169?v=4',
-    link: 'https://github.com/processing/p5.js',
-  },
-  {
-    owner: 'DhanushNehru',
-    repo_name: 'CustomCodeEditor',
-    avatar_url: 'https://avatars.githubusercontent.com/u/22955675?v=4',
-    link: 'https://github.com/DhanushNehru/CustomCodeEditor',
-  },
-  {
-    owner: 'PalisadoesFoundation',
-    repo_name: 'talawa-admin',
-    avatar_url: 'https://avatars.githubusercontent.com/u/24500036?v=4',
-    link: 'https://github.com/PalisadoesFoundation/talawa-admin',
-  },
-  {
-    owner: 'PalisadoesFoundation',
-    repo_name: 'talawa-api',
-    avatar_url: 'https://avatars.githubusercontent.com/u/24500036?v=4',
-    link: 'https://github.com/PalisadoesFoundation/talawa-api',
-  },
-  {
-    owner: 'code100x',
-    repo_name: 'daily-code',
-    avatar_url: 'https://avatars.githubusercontent.com/u/158404377?v=4',
-    link: 'https://github.com/code100x/daily-code',
-  },
-]
-
-export const githubAccessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN
-
 export const contributedRepo = [
   {
     owner: 'processing',
@@ -96,20 +55,6 @@ export const contributedRepo = [
     issues_count: 0,
     pr_count: 1,
   },
-  // {
-  //   owner: 'PalisadoesFoundation',
-  //   repo_name: 'talawa-api',
-  //   avatar_url: 'https://avatars.githubusercontent.com/u/24500036?v=4',
-  //   link: 'https://github.com/PalisadoesFoundation/talawa-api',
-  //   pr_link:
-  //     'https://github.com/PalisadoesFoundation/talawa-api/pulls?q=author%3AChaitanya1672+',
-  //   issues_link:
-  //     'https://github.com/PalisadoesFoundation/talawa-api/issues?q=is%3Aissue+author%3AChaitanya1672+',
-  //   stars: 0,
-  //   forks: 0,
-  //   issues_count: 0,
-  //   pr_count: 0,
-  // },
   {
     owner: 'code100x',
     repo_name: 'daily-code',

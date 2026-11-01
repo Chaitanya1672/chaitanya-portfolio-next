@@ -1,34 +1,24 @@
-import React from 'react'
-import { Github, ExternalLink, GitPullRequest, CircleDot } from 'lucide-react'
-import styles from './ContributionCard.module.css'
-import { RepoCardProps } from '@/utils/lib/types/repoCard'
+import {
+  CircleDot,
+  ExternalLink,
+  GitFork,
+  GitPullRequest,
+  Star,
+} from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import Image from 'next/image'
+import type { ContributionRepo } from '@/utils/lib/types/contribution'
+import styles from './ContributionCard.module.css'
 
-const ContributionCard = ({ repo }: { repo: RepoCardProps }) => {
-  const {
-    avatar_url,
-    repo_name,
-    owner,
-    link,
-    pr_link,
-    issues_link,
-    issues_count,
-    pr_count,
-    stars,
-    forks,
-  } = repo
+interface StatBoxProps {
+  label: string
+  value: number | string
+  link: string
+  icon: LucideIcon
+}
 
-  const StatBox = ({
-    label,
-    value,
-    link,
-    icon: Icon,
-  }: {
-    label: string
-    value: number | string
-    link?: string
-    icon?: React.ComponentType<any>
-  }) => (
+function StatBox({ label, value, link, icon: Icon }: StatBoxProps) {
+  return (
     <a
       href={link}
       target="_blank"
@@ -36,66 +26,71 @@ const ContributionCard = ({ repo }: { repo: RepoCardProps }) => {
       className={styles.statBox}
     >
       <div className={styles.statHeader}>
-        {Icon && <Icon className={styles.statIcon} />}
+        <Icon className={styles.statIcon} aria-hidden="true" />
         <p className={styles.statLabel}>{label}</p>
       </div>
       <p className={styles.statValue}>{value.toLocaleString()}</p>
     </a>
   )
+}
 
+export default function ContributionCard({ repo }: { repo: ContributionRepo }) {
   return (
-    <div className={styles.card}>
+    <article className={styles.card}>
       <div className={styles.header}>
         <div className={styles.avatarContainer}>
-          {avatar_url ? (
-            <Image
-              src={avatar_url}
-              alt={`${repo_name} logo`}
-              className={styles.avatar}
-              width={40}
-              height={40}
-            />
-          ) : (
-            <Github className={styles.avatar} />
-          )}
+          <Image
+            src={repo.avatar_url}
+            alt={`${repo.repo_name} logo`}
+            className={styles.avatar}
+            width={40}
+            height={40}
+            sizes="40px"
+          />
           <div>
             <a
-              href={link}
+              href={repo.link}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.repoLink}
             >
-              {repo_name}
-              <ExternalLink className={styles.externalIcon} />
+              {repo.repo_name}
+              <ExternalLink
+                className={styles.externalIcon}
+                aria-hidden="true"
+              />
             </a>
-            <p className={styles.owner}>{owner}</p>
+            <p className={styles.owner}>{repo.owner}</p>
           </div>
         </div>
       </div>
 
       <div className={styles.statsGrid}>
-        <StatBox label="Stars" value={stars} link={link} icon={Github} />
+        <StatBox
+          label="Stars"
+          value={repo.stars}
+          link={repo.link}
+          icon={Star}
+        />
         <StatBox
           label="Forks"
-          value={forks}
-          link={`${link}/fork`}
-          icon={Github}
+          value={repo.forks}
+          link={`${repo.link}/fork`}
+          icon={GitFork}
         />
         <StatBox
           label="Pull Requests"
-          value={pr_count}
-          link={pr_link}
+          value={repo.pr_count}
+          link={repo.pr_link}
           icon={GitPullRequest}
         />
         <StatBox
           label="Issues"
-          value={issues_count}
-          link={issues_link}
+          value={repo.issues_count}
+          link={repo.issues_link}
           icon={CircleDot}
         />
       </div>
-    </div>
+    </article>
   )
 }
-
-export default ContributionCard
