@@ -1,4 +1,4 @@
-export interface RepoCardProps {
+export interface ContributionRepo {
   owner: string
   repo_name: string
   avatar_url: string
@@ -9,8 +9,4 @@ export interface RepoCardProps {
   pr_count: number | string
   stars: number | string
   forks: number | string
-}
-
-export interface RepoCardComponentProps {
-  repo: RepoCardProps
 }

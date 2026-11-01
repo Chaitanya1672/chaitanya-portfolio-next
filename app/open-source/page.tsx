@@ -1,13 +1,9 @@
-'use client'
 import GitHubRepoCards from '@/components/Github/GitHubRepoCards'
-import React from 'react'
 
-const OpenSourcePage = () => {
+export default function OpenSourcePage() {
   return (
-    <div className="mt-5">
+    <main className="open-source-page mt-5">
       <GitHubRepoCards />
-    </div>
+    </main>
   )
 }
-
-export default OpenSourcePage

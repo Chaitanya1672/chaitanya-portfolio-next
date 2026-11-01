@@ -3,22 +3,37 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+  const pathname = usePathname()
+  const navigation = [
+    { href: '/', label: 'Home', path: '/' },
+    { href: '/skills', label: 'Skills', path: '/skills' },
+    { href: '/experience', label: 'Experience', path: '/experience' },
+    { href: '/open-source', label: 'Open Source', path: '/open-source' },
+    { href: '/projects', label: 'Projects', path: '/projects' },
+    { href: '/contact', label: 'Contact', path: '/contact' },
+  ]
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <Link className="navbar-brand" href="https://www.chaitanyanarhare.com/">
-          <Image src="/navbarImg.svg" alt="Brand Logo" width={50} height={50} />
+        <Link className="navbar-brand" href="/">
+          <Image
+            src="/Images/navbarImg.png"
+            alt="Chaitanya Portfolio"
+            width={131}
+            height={40}
+            style={{ width: 'auto' }}
+          />
         </Link>
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
+          aria-expanded={isMobileNavOpen}
           aria-label="Toggle navigation"
           onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
         >
@@ -29,23 +44,22 @@ const Navbar = () => {
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav ms-auto">
-            <Link
-              className="nav-link"
-              href="https://chaitanya-potfolio.vercel.app/"
-            >
-              Home
-            </Link>
-            <Link className="nav-link" href="/open-source">
-              Open Source
-            </Link>
-            {/* <Link className="nav-link" href="#skills">Skills</Link>
-            <Link className="nav-link" href="#experience">Experience</Link>
-            <Link className="nav-link" href="#projects">Projects</Link>
-            <Link className="nav-link" href="#contact">Contact</Link> */}
+            {navigation.map((item) => (
+              <Link
+                className={`nav-link ${pathname === item.path ? 'active' : ''}`}
+                href={item.href}
+                key={item.label}
+                aria-current={pathname === item.path ? 'page' : undefined}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
               className="nav-link"
               href="https://flowcv.com/resume/dknft98k3a"
               target="_blank"
+              rel="noreferrer"
             >
               Resume
             </Link>

@@ -1,9 +1,8 @@
-import { redirect } from 'next/navigation'
-import React from 'react'
+import './homepage.css'
+import HomePage from './HomePage'
 
-const Home = () => {
-  redirect('/open-source')
-  return <div>Home</div>
+export const revalidate = 86_400
+
+export default function Home() {
+  return <HomePage />
 }
-
-export default Home
